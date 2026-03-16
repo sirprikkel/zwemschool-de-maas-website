@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lestijden — Zwemschool de Maas</title>
+    <meta name="description" content="Overzicht van onze lestijden in Uden en Berghem. Zwemschool de Maas.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/prikkel" data-website-id="16eccc55-a581-40f4-a03f-ede47b084d47"></script>
+    <script>tailwind.config={theme:{extend:{colors:{ocean:{DEFAULT:'#0066CC',dark:'#004C99',light:'#1E90FF'},sun:{DEFAULT:'#FFB800',hover:'#FF8C00'},base:{DEFAULT:'#F0F4F8'},ink:{DEFAULT:'#1A2B3D',muted:'#5A7184'}},fontFamily:{heading:['Fredoka','sans-serif'],body:['Nunito','sans-serif']},borderRadius:{clay:'20px'}}}}</script>
+    <style>
+        *{font-family:'Nunito',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'Fredoka',sans-serif}
+        .clay-card{border-radius:20px;border:3px solid rgba(0,102,204,0.15);box-shadow:inset -2px -2px 8px rgba(255,255,255,0.6),4px 4px 12px rgba(0,102,204,0.12);background:white;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out}
+        .clay-card:hover{transform:translateY(-4px);box-shadow:inset -2px -2px 8px rgba(255,255,255,0.6),6px 8px 20px rgba(0,102,204,0.18)}
+        .clay-btn{border-radius:16px;border:3px solid transparent;box-shadow:inset -1px -1px 4px rgba(255,255,255,0.4),3px 3px 8px rgba(0,0,0,0.12);transition:all 0.2s ease-out;min-height:44px;cursor:pointer}
+        @media(prefers-reduced-motion:reduce){.clay-card:hover{transform:none}}
+    </style>
+</head>
+<body class="bg-base font-body text-ink">
+    <nav class="bg-white/90 backdrop-blur-sm sticky top-0 z-50" style="border-bottom:3px solid rgba(0,102,204,0.1);">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div class="flex items-center justify-between h-20">
+            <a href="index.html" class="flex items-center gap-3 cursor-pointer"><img src="images/logo.png" alt="Logo" class="h-14 w-auto"><span class="font-heading font-bold text-ocean text-xl hidden sm:block">Zwemschool de Maas</span></a>
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Home</a>
+                <a href="zwemles.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Zwemles</a>
+                <a href="diploma-eisen.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Diploma Eisen</a>
+                <a href="lestijden.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ocean bg-ocean/5 cursor-pointer">Lestijden</a>
+                <a href="tarieven.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Tarieven</a>
+                <a href="locaties.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Locaties</a>
+                <a href="team.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Team</a>
+                <a href="contact.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Contact</a>
+                <a href="inschrijven.html" class="clay-btn bg-sun hover:bg-sun-hover text-white font-bold px-5 py-2 text-sm ml-2">Inschrijven</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-clay text-ocean cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div></div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t-2 border-ocean/10 pb-4"><div class="px-4 pt-2 space-y-1">
+            <a href="index.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Home</a>
+            <a href="zwemles.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Zwemles</a>
+            <a href="diploma-eisen.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Diploma Eisen</a>
+            <a href="lestijden.html" class="block px-4 py-3 rounded-clay font-semibold text-ocean bg-ocean/5 cursor-pointer">Lestijden</a>
+            <a href="tarieven.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Tarieven</a>
+            <a href="locaties.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Locaties</a>
+            <a href="team.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Team</a>
+            <a href="contact.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Contact</a>
+            <a href="inschrijven.html" class="block clay-btn bg-sun text-white font-bold px-4 py-3 text-center mt-2 cursor-pointer">Inschrijven</a>
+        </div></div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-ocean to-ocean-dark py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"><svg class="w-full h-full" viewBox="0 0 1440 300" preserveAspectRatio="none"><path fill="white" d="M0,150 C360,50 720,250 1440,150 L1440,0 L0,0 Z"/></svg></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h1 class="font-heading font-bold text-4xl md:text-5xl text-white mb-4">Lestijden</h1>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto">Overzicht van onze lestijden voor diploma A, B en C in Uden en Berghem.</p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:50px;"><path fill="#F0F4F8" d="M0,30 C360,60 720,0 1440,30 L1440,60 L0,60 Z"/></svg></div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-base">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <p class="text-ink-muted text-center text-lg mb-12 max-w-2xl mx-auto">Heeft u een voorkeur voor een bepaalde dag? Geef dit aan bij het <a href="inschrijven.html" class="text-ocean font-semibold hover:text-ocean-dark transition-colors duration-200 cursor-pointer">inschrijven</a>. Neem <a href="contact.html" class="text-ocean font-semibold hover:text-ocean-dark transition-colors duration-200 cursor-pointer">contact</a> op om de mogelijkheden te bespreken.</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Uden -->
+                <div class="clay-card p-8">
+                    <div class="w-14 h-14 rounded-full bg-ocean/10 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h2 class="font-heading font-bold text-2xl text-ocean mb-6">Lestijden Uden</h2>
+                    <p class="text-ink-muted text-sm mb-4">Zeesterbad, Hockeyweg 6, Uden</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-2 border-b border-ocean/10">
+                            <span class="font-semibold text-ink">Woensdag</span>
+                            <span class="text-ink-muted">13:00 – 17:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Berghem -->
+                <div class="clay-card p-8">
+                    <div class="w-14 h-14 rounded-full bg-ocean/10 flex items-center justify-center mb-4">
+                        <svg class="w-7 h-7 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h2 class="font-heading font-bold text-2xl text-ocean mb-6">Lestijden Berghem</h2>
+                    <p class="text-ink-muted text-sm mb-4">Privébad, Harenseweg 10, Berghem</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-2 border-b border-ocean/10">
+                            <span class="font-semibold text-ink">Maandag</span>
+                            <span class="text-ink-muted">15:15 – 19:15</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-ocean/10">
+                            <span class="font-semibold text-ink">Dinsdag</span>
+                            <span class="text-ink-muted">15:15 – 19:15</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-ocean/10">
+                            <span class="font-semibold text-ink">Woensdag</span>
+                            <span class="text-ink-muted">13:00 – 18:30</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-ocean/10">
+                            <span class="font-semibold text-ink">Donderdag</span>
+                            <span class="text-ink-muted">16:00 – 19:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-ocean/10">
+                            <span class="font-semibold text-ink">Vrijdag</span>
+                            <span class="text-ink-muted">13:00 – 19:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2">
+                            <span class="font-semibold text-ink">Zaterdag</span>
+                            <span class="text-ink-muted">08:30 – 17:30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="inschrijven.html" class="clay-btn bg-sun hover:bg-sun-hover text-white font-bold px-8 py-4 text-lg inline-block cursor-pointer">Schrijf je kind in</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ocean-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div><img src="images/logo.png" alt="Logo" class="h-16 w-auto mb-4 brightness-0 invert"><p class="text-white/70 text-sm">Al vele jaren met veel succes zwemles in Berghem en Uden.</p></div>
+                <div><h4 class="font-heading font-semibold text-lg mb-4">Pagina's</h4><ul class="space-y-2 text-sm"><li><a href="zwemles.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Zwemles</a></li><li><a href="diploma-eisen.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Diploma Eisen</a></li><li><a href="tarieven.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Tarieven</a></li><li><a href="locaties.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Locaties</a></li><li><a href="team.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Team</a></li></ul></div>
+                <div><h4 class="font-heading font-semibold text-lg mb-4">Contact</h4><ul class="space-y-2 text-sm text-white/70"><li>Berghem: 0492 347577</li><li>Uden: 0413 25 36 63</li><li><a href="mailto:info@zwemschooldemaas.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@zwemschooldemaas.nl</a></li></ul></div>
+            </div>
+            <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50"><p>© 2026 Zwemschool de Maas</p><p>Gebouwd door <a href="https://www.code-lieshout.nl" target="_blank" rel="noopener" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></p></div>
+        </div>
+    </footer>
+    <script>document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden')});</script>
+</body>
+</html>

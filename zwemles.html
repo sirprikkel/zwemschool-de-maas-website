@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwemles — Zwemschool de Maas</title>
+    <meta name="description" content="Bij Zwemschool de Maas werken we in groepjes van 7-9 kinderen. Vaste leerkracht, les in het water. Start vanaf 4,5 jaar.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/prikkel" data-website-id="16eccc55-a581-40f4-a03f-ede47b084d47"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: { DEFAULT: '#0066CC', dark: '#004C99', light: '#1E90FF' },
+                        sun: { DEFAULT: '#FFB800', hover: '#FF8C00' },
+                        base: { DEFAULT: '#F0F4F8', white: '#FFFFFF' },
+                        ink: { DEFAULT: '#1A2B3D', muted: '#5A7184' }
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Nunito', 'sans-serif']
+                    },
+                    borderRadius: { clay: '20px', 'clay-lg': '24px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Nunito', sans-serif; }
+        h1,h2,h3,h4,h5,h6 { font-family: 'Fredoka', sans-serif; }
+        .clay-card { border-radius:20px; border:3px solid rgba(0,102,204,0.15); box-shadow:inset -2px -2px 8px rgba(255,255,255,0.6),4px 4px 12px rgba(0,102,204,0.12); background:white; transition:transform 0.2s ease-out,box-shadow 0.2s ease-out; }
+        .clay-card:hover { transform:translateY(-4px); box-shadow:inset -2px -2px 8px rgba(255,255,255,0.6),6px 8px 20px rgba(0,102,204,0.18); }
+        .clay-btn { border-radius:16px; border:3px solid transparent; box-shadow:inset -1px -1px 4px rgba(255,255,255,0.4),3px 3px 8px rgba(0,0,0,0.12); transition:all 0.2s ease-out; min-height:44px; cursor:pointer; }
+        .clay-btn:active { transform:scale(0.97); }
+        @media (prefers-reduced-motion:reduce) { .clay-card:hover{transform:none;} }
+    </style>
+</head>
+<body class="bg-base font-body text-ink">
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-sm sticky top-0 z-50" style="border-bottom:3px solid rgba(0,102,204,0.1);">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex items-center gap-3 cursor-pointer">
+                    <img src="images/logo.png" alt="Zwemschool de Maas logo" class="h-14 w-auto">
+                    <span class="font-heading font-bold text-ocean text-xl hidden sm:block">Zwemschool de Maas</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="index.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Home</a>
+                    <a href="zwemles.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ocean bg-ocean/5 cursor-pointer">Zwemles</a>
+                    <a href="diploma-eisen.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Diploma Eisen</a>
+                    <a href="lestijden.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Lestijden</a>
+                    <a href="tarieven.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Tarieven</a>
+                    <a href="locaties.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Locaties</a>
+                    <a href="team.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Team</a>
+                    <a href="contact.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Contact</a>
+                    <a href="inschrijven.html" class="clay-btn bg-sun hover:bg-sun-hover text-white font-bold px-5 py-2 text-sm ml-2">Inschrijven</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-clay text-ocean cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t-2 border-ocean/10 pb-4">
+            <div class="px-4 pt-2 space-y-1">
+                <a href="index.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Home</a>
+                <a href="zwemles.html" class="block px-4 py-3 rounded-clay font-semibold text-ocean bg-ocean/5 cursor-pointer">Zwemles</a>
+                <a href="diploma-eisen.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Diploma Eisen</a>
+                <a href="lestijden.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Lestijden</a>
+                <a href="tarieven.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Tarieven</a>
+                <a href="locaties.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Locaties</a>
+                <a href="team.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Team</a>
+                <a href="contact.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Contact</a>
+                <a href="inschrijven.html" class="block clay-btn bg-sun text-white font-bold px-4 py-3 text-center mt-2 cursor-pointer">Inschrijven</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-ocean to-ocean-dark py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1440 300" preserveAspectRatio="none"><path fill="white" d="M0,150 C360,50 720,250 1440,150 L1440,0 L0,0 Z"/></svg>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h1 class="font-heading font-bold text-4xl md:text-5xl text-white mb-4">Zwemles</h1>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto">Met een gerust hart kunt u de zwemlessen van uw kind aan ons toevertrouwen.</p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:50px;"><path fill="#F0F4F8" d="M0,30 C360,60 720,0 1440,30 L1440,60 L0,60 Z"/></svg>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16 md:py-20 bg-base">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="clay-card p-8 md:p-12 mb-8">
+                <h2 class="font-heading font-bold text-2xl text-ocean mb-6">Hoe werken de zwemlessen?</h2>
+                <div class="space-y-4 text-ink leading-relaxed">
+                    <p>Bij Zwemschool "de Maas" wordt al vele jaren met veel succes zwemles gegeven. Wij hebben de <strong>Licentie Nationale Zwemdiploma's</strong> en worden elk jaar onafhankelijk getoetst door de stichting Nationale Raad Zwemveiligheid.</p>
+                    <p>Zo weet je als ouder zeker dat de zwemlessen en het zwemdiploma voldoen aan de meest recente kwaliteitscriteria en leg je de basis voor een leven lang zwemplezier en –veiligheid.</p>
+                    <p>De zwemonderwijzers werken volgens de <strong>Gedragscode Zwembranche</strong>, hebben een Verklaring Omtrent Gedrag (VOG) en blijven bijgeschoold.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="clay-card p-6">
+                    <div class="w-12 h-12 rounded-full bg-ocean/10 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg text-ocean mb-2">Lesformat</h3>
+                    <ul class="text-ink-muted space-y-1 text-sm">
+                        <li>• 1 keer per week</li>
+                        <li>• 1 uur per les</li>
+                        <li>• Groepjes van 7 tot 9 kinderen</li>
+                        <li>• Vaste tijd en vaste leerkracht</li>
+                    </ul>
+                </div>
+                <div class="clay-card p-6">
+                    <div class="w-12 h-12 rounded-full bg-ocean/10 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-ocean" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg text-ocean mb-2">Startleeftijd</h3>
+                    <ul class="text-ink-muted space-y-1 text-sm">
+                        <li>• Vanaf 4,5 jaar</li>
+                        <li>• Adviesleeftijd: 5 jaar</li>
+                        <li>• Direct beginnen met slagen</li>
+                        <li>• Spelenderwijs watervrij maken</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="clay-card p-8 md:p-12 mb-8">
+                <h2 class="font-heading font-bold text-2xl text-ocean mb-6">Hoelang duurt het?</h2>
+                <div class="space-y-4 text-ink leading-relaxed">
+                    <p>Kinderen hebben gemiddeld <strong>4 blokjes</strong> nodig voor het behalen van het diploma A, <strong>1 blok</strong> voor het diploma B en <strong>1 blok</strong> voor het diploma C.</p>
+                    <p>Wij gebruiken hulpmiddelen zoals het plankje, een kurk om de buik en bandjes om de armen.</p>
+                    <p>Meer informatie over zwemles: <a href="https://www.allesoverzwemles.nl/" target="_blank" rel="noopener" class="text-ocean font-semibold hover:text-ocean-dark transition-colors duration-200 cursor-pointer">allesoverzwemles.nl</a></p>
+                </div>
+            </div>
+
+            <div class="clay-card p-6 overflow-hidden">
+                <img src="images/licentie.jpg" alt="Licentie Nationale Zwemdiploma's" class="w-full h-auto rounded-[16px]" loading="lazy">
+                <p class="text-ink-muted text-sm mt-4 text-center">Wij hebben de Licentie Nationale Zwemdiploma's van de Nationale Raad Zwemveiligheid.</p>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="inschrijven.html" class="clay-btn bg-sun hover:bg-sun-hover text-white font-bold px-8 py-4 text-lg inline-block cursor-pointer">Schrijf je kind in</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ocean-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div>
+                    <img src="images/logo.png" alt="Zwemschool de Maas" class="h-16 w-auto mb-4 brightness-0 invert">
+                    <p class="text-white/70 text-sm leading-relaxed">Al vele jaren met veel succes zwemles in Berghem en Uden.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-lg mb-4">Pagina's</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="zwemles.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Zwemles</a></li>
+                        <li><a href="diploma-eisen.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Diploma Eisen</a></li>
+                        <li><a href="lestijden.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Lestijden</a></li>
+                        <li><a href="tarieven.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Tarieven</a></li>
+                        <li><a href="locaties.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Locaties</a></li>
+                        <li><a href="team.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Team</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-semibold text-lg mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li>Berghem: 0492 347577</li>
+                        <li>Uden: 0413 25 36 63</li>
+                        <li><a href="mailto:info@zwemschooldemaas.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@zwemschooldemaas.nl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
+                <p>© 2026 Zwemschool de Maas</p>
+                <p>Gebouwd door <a href="https://www.code-lieshout.nl" target="_blank" rel="noopener" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma Eisen — Zwemschool de Maas</title>
+    <meta name="description" content="De examenprogramma's met diploma eisen voor diploma A, B en C van het Zwem-ABC.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/prikkel" data-website-id="16eccc55-a581-40f4-a03f-ede47b084d47"></script>
+    <script>tailwind.config={theme:{extend:{colors:{ocean:{DEFAULT:'#0066CC',dark:'#004C99',light:'#1E90FF'},sun:{DEFAULT:'#FFB800',hover:'#FF8C00'},base:{DEFAULT:'#F0F4F8',white:'#FFFFFF'},ink:{DEFAULT:'#1A2B3D',muted:'#5A7184'}},fontFamily:{heading:['Fredoka','sans-serif'],body:['Nunito','sans-serif']},borderRadius:{clay:'20px'}}}}</script>
+    <style>
+        *{font-family:'Nunito',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'Fredoka',sans-serif}
+        .clay-card{border-radius:20px;border:3px solid rgba(0,102,204,0.15);box-shadow:inset -2px -2px 8px rgba(255,255,255,0.6),4px 4px 12px rgba(0,102,204,0.12);background:white;transition:transform 0.2s ease-out,box-shadow 0.2s ease-out}
+        .clay-card:hover{transform:translateY(-4px);box-shadow:inset -2px -2px 8px rgba(255,255,255,0.6),6px 8px 20px rgba(0,102,204,0.18)}
+        .clay-btn{border-radius:16px;border:3px solid transparent;box-shadow:inset -1px -1px 4px rgba(255,255,255,0.4),3px 3px 8px rgba(0,0,0,0.12);transition:all 0.2s ease-out;min-height:44px;cursor:pointer}
+        @media(prefers-reduced-motion:reduce){.clay-card:hover{transform:none}}
+    </style>
+</head>
+<body class="bg-base font-body text-ink">
+    <nav class="bg-white/90 backdrop-blur-sm sticky top-0 z-50" style="border-bottom:3px solid rgba(0,102,204,0.1);">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div class="flex items-center justify-between h-20">
+            <a href="index.html" class="flex items-center gap-3 cursor-pointer"><img src="images/logo.png" alt="Logo" class="h-14 w-auto"><span class="font-heading font-bold text-ocean text-xl hidden sm:block">Zwemschool de Maas</span></a>
+            <div class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Home</a>
+                <a href="zwemles.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Zwemles</a>
+                <a href="diploma-eisen.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ocean bg-ocean/5 cursor-pointer">Diploma Eisen</a>
+                <a href="lestijden.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Lestijden</a>
+                <a href="tarieven.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Tarieven</a>
+                <a href="locaties.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Locaties</a>
+                <a href="team.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Team</a>
+                <a href="contact.html" class="px-3 py-2 rounded-clay text-sm font-semibold text-ink hover:text-ocean hover:bg-ocean/5 transition-colors duration-200 cursor-pointer">Contact</a>
+                <a href="inschrijven.html" class="clay-btn bg-sun hover:bg-sun-hover text-white font-bold px-5 py-2 text-sm ml-2">Inschrijven</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-clay text-ocean cursor-pointer min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div></div>
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t-2 border-ocean/10 pb-4"><div class="px-4 pt-2 space-y-1">
+            <a href="index.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Home</a>
+            <a href="zwemles.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Zwemles</a>
+            <a href="diploma-eisen.html" class="block px-4 py-3 rounded-clay font-semibold text-ocean bg-ocean/5 cursor-pointer">Diploma Eisen</a>
+            <a href="lestijden.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Lestijden</a>
+            <a href="tarieven.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Tarieven</a>
+            <a href="locaties.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Locaties</a>
+            <a href="team.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Team</a>
+            <a href="contact.html" class="block px-4 py-3 rounded-clay font-semibold text-ink hover:bg-ocean/5 cursor-pointer">Contact</a>
+            <a href="inschrijven.html" class="block clay-btn bg-sun text-white font-bold px-4 py-3 text-center mt-2 cursor-pointer">Inschrijven</a>
+        </div></div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-ocean to-ocean-dark py-16 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"><svg class="w-full h-full" viewBox="0 0 1440 300" preserveAspectRatio="none"><path fill="white" d="M0,150 C360,50 720,250 1440,150 L1440,0 L0,0 Z"/></svg></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h1 class="font-heading font-bold text-4xl md:text-5xl text-white mb-4">Diploma Eisen</h1>
+            <p class="text-white/80 text-lg max-w-2xl mx-auto">Het examenprogramma van het Zwem-ABC, nauwkeurig samengesteld door de Nationale Raad Zwemveiligheid.</p>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="display:block;width:100%;height:50px;"><path fill="#F0F4F8" d="M0,30 C360,60 720,0 1440,30 L1440,60 L0,60 Z"/></svg></div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-base">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 space-y-8">
+            <!-- Diploma A -->
+            <div class="clay-card p-8 md:p-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="images/diploma-a.jpg" alt="Diploma A" class="w-20 h-auto rounded-clay" loading="lazy">
+                    <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean">Eisen Diploma A</h2>
+                </div>
+                <div class="space-y-6 text-ink leading-relaxed">
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">A1 — Survival met kleding</h3>
+                        <p class="text-sm text-ink-muted mb-1">Kleding: lange broek, t-shirt met lange mouwen, waterschoentjes.</p>
+                        <ul class="text-sm text-ink-muted space-y-1 list-disc ml-5">
+                            <li>Voetsprong voorwaarts vanaf enige hoogte</li>
+                            <li>15 seconden watertrappen</li>
+                            <li>12,5 meter zwemmen</li>
+                            <li>Zelfstandig uit het water klimmen</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">A2 — Onder water oriëntatie</h3>
+                        <ul class="text-sm text-ink-muted space-y-1 list-disc ml-5">
+                            <li>Van de kant te water gaan met een sprong (duiken heeft de voorkeur)</li>
+                            <li>Onder water zwemmen door een gat in een zeil op 3 meter afstand</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">A3 — Conditiezwemmen</h3>
+                        <ul class="text-sm text-ink-muted space-y-1 list-disc ml-5">
+                            <li>25m schoolslag + 25m rugslag + 25m schoolslag (met 1x richting bodem zakken) + 25m rugslag</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">A4 — Borst- en rugcrawl</h3>
+                        <p class="text-sm text-ink-muted">5 meter borstcrawl + 5 meter rugcrawl</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">A5 — Vertrouwd voelen in het water</h3>
+                        <p class="text-sm text-ink-muted">Enkele slagen op de buik, 5 sec drijven op buik, halve draai, 10 sec drijven op de rug.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">A6 — Boven water oriënteren</h3>
+                        <p class="text-sm text-ink-muted">60 seconden watertrappen, 2x hele draai om de lengte-as.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diploma B -->
+            <div class="clay-card p-8 md:p-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="images/diploma-b.jpg" alt="Diploma B" class="w-20 h-auto rounded-clay" loading="lazy">
+                    <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean">Eisen Diploma B</h2>
+                </div>
+                <div class="space-y-6 text-ink leading-relaxed">
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">B1 — Survival met kleding</h3>
+                        <p class="text-sm text-ink-muted">Achterwaarts te water, 15 sec watertrappen, 50m zwemmen (onder drijvend voorwerp door), uit het water klimmen.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">B2 — Onder water oriëntatie</h3>
+                        <p class="text-sm text-ink-muted">Van de kant duiken, onder water door zeil op 6 meter afstand.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">B3 — Conditiezwemmen</h3>
+                        <p class="text-sm text-ink-muted">150m totaal: afwisselend schoolslag en rugslag, met 2x halve draai om lengte-as.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">B4 — Borst- en rugcrawl</h3>
+                        <p class="text-sm text-ink-muted">10 meter borstcrawl + 10 meter rugcrawl.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">B5 — Vertrouwd voelen</h3>
+                        <p class="text-sm text-ink-muted">Springen, 15 sec drijven op rug, 5m voortbewegen naar drijvend voorwerp, 20 sec drijven met voorwerp.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">B6 — Boven water oriënteren</h3>
+                        <p class="text-sm text-ink-muted">60 sec watertrappen met verplaatsen, voetwaarts richting bodem zakken.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diploma C -->
+            <div class="clay-card p-8 md:p-10">
+                <div class="flex items-center gap-4 mb-6">
+                    <img src="images/diploma-c.jpg" alt="Diploma C" class="w-20 h-auto rounded-clay" loading="lazy">
+                    <h2 class="font-heading font-bold text-2xl md:text-3xl text-ocean">Eisen Diploma C</h2>
+                </div>
+                <div class="space-y-6 text-ink leading-relaxed">
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">C1 — Survival met kleding</h3>
+                        <p class="text-sm text-ink-muted mb-1">Kleding: lange broek, t-shirt, jas en waterschoentjes.</p>
+                        <p class="text-sm text-ink-muted">Rol voorover, 15 sec watertrappen, 30 sec drijven met drijvend voorwerp, 5m rugzwemmen. Daarna: sprong, 100m zwemmen (onder en over voorwerp), uit het water.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">C2 — Onder water oriëntatie</h3>
+                        <p class="text-sm text-ink-muted">Duiken, door zeil op 6m, bovenkomen in een soort wak.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">C3 — Conditiezwemmen</h3>
+                        <p class="text-sm text-ink-muted">75m schoolslag (1x richting bodem) + 75m rugslag.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">C4 — Borst- en rugcrawl</h3>
+                        <p class="text-sm text-ink-muted">15 meter borstcrawl + 15 meter rugcrawl.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading font-semibold text-lg text-ocean-dark mb-2">C5 — Boven water oriënteren</h3>
+                        <p class="text-sm text-ink-muted">30 sec watertrappen met verplaatsen, 15 sec drijven op rug, 30 sec watertrappen met benen.</p>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-ocean/5 rounded-clay">
+                    <p class="text-sm text-ink">Een kind met een C diploma op zak zal zichzelf goed in het water kunnen redden. Het diploma C gedeelte is vaak het meest leuk voor de kinderen!</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="inschrijven.html" class="clay-btn bg-sun hover:bg-sun-hover text-white font-bold px-8 py-4 text-lg inline-block cursor-pointer">Schrijf je kind in</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-ocean-dark text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-10 mb-12">
+                <div><img src="images/logo.png" alt="Logo" class="h-16 w-auto mb-4 brightness-0 invert"><p class="text-white/70 text-sm">Al vele jaren met veel succes zwemles in Berghem en Uden.</p></div>
+                <div><h4 class="font-heading font-semibold text-lg mb-4">Pagina's</h4><ul class="space-y-2 text-sm"><li><a href="zwemles.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Zwemles</a></li><li><a href="lestijden.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Lestijden</a></li><li><a href="tarieven.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Tarieven</a></li><li><a href="locaties.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Locaties</a></li><li><a href="team.html" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Team</a></li></ul></div>
+                <div><h4 class="font-heading font-semibold text-lg mb-4">Contact</h4><ul class="space-y-2 text-sm text-white/70"><li>Berghem: 0492 347577</li><li>Uden: 0413 25 36 63</li><li><a href="mailto:info@zwemschooldemaas.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@zwemschooldemaas.nl</a></li></ul></div>
+            </div>
+            <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50"><p>© 2026 Zwemschool de Maas</p><p>Gebouwd door <a href="https://www.code-lieshout.nl" target="_blank" rel="noopener" class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></p></div>
+        </div>
+    </footer>
+    <script>document.getElementById('mobile-menu-btn').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden')});</script>
+</body>
+</html>
